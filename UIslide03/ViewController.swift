@@ -10,16 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mySlide: UISlider!
+    @IBOutlet weak var myLb: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func slideMd(_ sender: Any) {
+        
+        let val = Int(mySlide.value)
+        
+        print(val)
+        print("슬라이드 움직임")
+        myLb.text = String(val)
+    
     }
-
+    
 
 }
 
